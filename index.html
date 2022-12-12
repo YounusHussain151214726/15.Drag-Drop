@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body>
+    <section class="container">
+      <h2>Kanban Board</h2>
+      <section class="sub-container">
+        <div class="progressboard drag-container">
+          <span>
+            <h1>Progress</h1>
+          </span>
+
+          <ul
+            class="drag-item-list"
+            id="progress-list"
+            ondrop="onDrop(event)"
+            ondragover="onAllowDrop(event)"
+            ondragenter="dragEnter('0')"
+          ></ul>
+
+          <button class="add-btn" onclick="addnew(0)">Add +</button>
+          <div class="text" id="newTxt0" contenteditable="true" hidden></div>
+        </div>
+
+        <!-- board 2 -->
+
+        <div class="onHoldboard drag-container">
+          <span>
+            <h1>onHold</h1>
+          </span>
+
+          <ul
+            class="drag-item-list"
+            id="onhold-list"
+            ondrop="onDrop(event)"
+            ondragover="onAllowDrop(event)"
+            ondragenter="dragEnter('1')"
+          ></ul>
+
+          <button class="add-btn" onclick="addnew(1)">Add +</button>
+          <div class="text" id="newTxt1" contenteditable="true" hidden></div>
+        </div>
+
+        <!-- board 3 -->
+
+        <div class="backLogboard drag-container">
+          <span>
+            <h1>backLog</h1>
+          </span>
+
+          <ul
+            class="drag-item-list"
+            id="backlog-list"
+            ondrop="onDrop(event)"
+            ondragover="onAllowDrop(event)"
+            ondragenter="dragEnter('2')"
+          ></ul>
+
+          <button class="add-btn" onclick="addnew(2)">Add +</button>
+
+          <div class="text" id="newTxt2" contenteditable="true" hidden></div>
+        </div>
+
+        <!-- board4 -->
+
+        <div class="completeboard drag-container">
+          <span>
+            <h1>Completed</h1>
+          </span>
+
+          <ul
+            class="drag-item-list"
+            id="complete-list"
+            ondrop="onDrop(event)"
+            ondragover="onAllowDrop(event)"
+            ondragenter="dragEnter('3')"
+          ></ul>
+
+          <div class="button-add">
+            <button class="add-btn" onclick="addnew(3)">Add +</button>
+          </div>
+
+          <div class="text" id="newTxt3" contenteditable="true" hidden></div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(./backGround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h2 {
+  padding: 3rem;
+}
+
+.sub-container {
+  display: flex;
+  justify-content: center;
+}
+
+.progressboard,
+.onHoldboard,
+.backLogboard,
+.completeboard {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid green;
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+
+.progressboard > ul,
+.onHoldboard > ul,
+.backLogboard > ul,
+.completeboard > ul {
+  list-style: none;
+  width: 100%;
+}
+
+.progressboard > ul > :nth-of-type(1),
+.backLogboard > ul > :nth-of-type(1),
+.completeboard > ul > :nth-of-type(1),
+.onHoldboard > ul > :nth-of-type(1) {
+  border: 2px solid green;
+}
+
+.progressboard > ul > :nth-of-type(2),
+.completeboard > ul > :nth-of-type(2),
+.onHoldboard > ul > :nth-of-type(2),
+.backLogboard > ul > :nth-of-type(2) {
+  border: 2px solid green;
+  margin: 1rem 0 1rem 0;
+}
+
+button {
+  float: right;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.li {
+  border: 2px solid rgb(10, 216, 10);
+  margin: 1rem 0 1rem 0;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+}
+
+.text {
+  border: 2px solid rgb(215, 224, 215);
+  width: 280px;
+  height: 10rem;
+  margin: 2.5rem 0 0 0;
+  position: absolute;
+  outline: none;
+  border-radius: 0.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  .sub-container {
+    flex-direction: column;
+  }
+
+  .progressboard,
+  .onHoldboard,
+  .backLogboard,
+  .completeboard {
+    margin-top: 2rem;
+  }
+}
